@@ -1,0 +1,12 @@
+\\Mac\Home\Documents\GitHub\VideoListShow\VideoListShow\VideoListShow\obj\Debug\ZESTrans_TechSupport.csprojAssemblyReference.cache
+\\Mac\Home\Documents\GitHub\VideoListShow\VideoListShow\VideoListShow\obj\Debug\VideoListShow.Main.resources
+\\Mac\Home\Documents\GitHub\VideoListShow\VideoListShow\VideoListShow\obj\Debug\VideoListShow.Properties.Resources.resources
+\\Mac\Home\Documents\GitHub\VideoListShow\VideoListShow\VideoListShow\obj\Debug\ZESTrans_TechSupport.csproj.GenerateResource.cache
+\\Mac\Home\Documents\GitHub\VideoListShow\VideoListShow\VideoListShow\obj\Debug\ZESTrans_TechSupport.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\GitHub\VideoListShow\VideoListShow\VideoListShow\obj\Debug\VideoListShow.exe
+\\Mac\Home\Documents\GitHub\VideoListShow\VideoListShow\VideoListShow\obj\Debug\VideoListShow.pdb
+\\Mac\Home\Documents\GitHub\VideoListShow\VideoListShow\VideoListShow\bin\Debug\VideoListShow.exe
+\\Mac\Home\Documents\GitHub\VideoListShow\VideoListShow\VideoListShow\bin\Debug\VideoListShow.pdb
+\\Mac\Home\Documents\GitHub\VideoListShow\VideoListShow\VideoListShow\bin\Debug\CSkin.dll
+\\Mac\Home\Documents\GitHub\VideoListShow\VideoListShow\VideoListShow\bin\Debug\CSkin.xml
+\\Mac\Home\Documents\GitHub\VideoListShow\VideoListShow\VideoListShow\obj\Debug\ZESTrans_TechSupport.csproj.CopyComplete
