@@ -25,9 +25,9 @@ namespace VideoListShow
 
         private void Main_Load(object sender, EventArgs e)
         {
-            init();
             LookFile();
             CreateThumb();
+            init();
             CreateImageButtons();
         }
 
@@ -41,9 +41,9 @@ namespace VideoListShow
             //设定字体大小为12px     
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
             this.Size = new Size((int)(1366*dpiX),(int)(768*dpiY));
-            label1.Location = new Point((this.Width / 2) - (label1.Text.Length * 35), (int)(83*dpiY));
-            Images_pnl.Location = new Point((int)(100*dpiX),(int)(200*dpiY));
-            Images_pnl.Size = new Size((int)(1366 * dpiX), (int)(768 * dpiY)); ;
+            label1.Location = new Point((int)((this.Width / 2) - (label1.Text.Length * (18*dpiX))), (int)(83*dpiY));
+            Images_pnl.Location = new Point((int)(120*dpiX),(int)(200*dpiY));
+            Images_pnl.Size = new Size((int)(1366 * dpiX), (int)(570* dpiY));
         }
 
 
@@ -109,11 +109,11 @@ namespace VideoListShow
             foreach (Video _v  in allVideos)
             {
                 Button btn = new Button();
-                btn.Parent = Images_pnl;
-                //btn.Size = new Size((int)(240*dpiX), (int)(135 * dpiY));
+                //btn.Parent = Images_pnl;
+                //btn.Size = new Size((int)(240*dpiX), (int)(10 * dpiY));
                 btn.Size = new Size((int)(270 * dpiX), (int)(151 * dpiY));
                 //btn.Location = new Point((int)((100 + 285 * count)*dpiX), (int)(200*dpiY));
-                btn.Location = new Point((int)(285 * (count%4)*dpiX), (int)((count/4)*200*dpiY));
+                btn.Location = new Point((int)(285 * (count%4)*dpiX), (int)((count/4)*180*dpiY));
                 //btn.BackColor = Color.Blue;
                 btn.Name = _v.fileInfo.Name.Split('.')[0];
                 //btn.FlatAppearance.BorderColor = Color.White;
@@ -123,10 +123,10 @@ namespace VideoListShow
                 this.Controls.Add(btn);
                 allButtons.Add(btn);
                 Label lbl = new Label();
-                lbl.Parent = Images_pnl;
+                //lbl.Parent = Images_pnl;
                 lbl.Font = new Font("微软雅黑", 11.0f, FontStyle.Regular);
-                //lbl.Location = new Point((int)((100 + 300 * count) * dpiX), (int)((200+150) * dpiY));
-                lbl.Location = new Point((int)(285 * (count % 4) * dpiX), (int)((((count / 4) * 200)+152) * dpiY));
+                //lbl.Location = new Point((int)((100 + 300 * count) * dpiX), (int)((count/) * dpiY));
+                lbl.Location = new Point((int)(285 * (count % 4) * dpiX), (int)((((count / 4) * 180)+152) * dpiY));
                 //lbl.AutoSize = true;
                 lbl.ForeColor = System.Drawing.ColorTranslator.FromHtml("#505050");
                 lbl.Text = _v.fileInfo.Name.Split('.')[0];
@@ -193,12 +193,15 @@ namespace VideoListShow
             this.Images_pnl.VerticalScroll.Enabled = true;
             this.Images_pnl.VerticalScroll.Visible = true;
             Images_pnl.AutoScroll = true;
+            Images_pnl.AutoScrollMinSize = new Size(0, 0);
             this.Images_pnl.Scroll += Images_pnl_Scroll;
         }
 
         private void Images_pnl_Scroll(object sender, ScrollEventArgs e)
         {
             this.Images_pnl.VerticalScroll.Value = e.NewValue;
+            //Images_pnl.VerticalScroll.Value = Images_pnl.VerticalScroll.Maximum;
+            //Images_pnl.Invalidate();//刷新panel
         }
 
         //执行ffmpeg指令
